@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <select id="hours" onchange="myhours()">
+    </select>
+    <select id="minutes">
+    </select>
+    <script>
+        const date = new Date();
+        var hours = date.getHours();
+        console.log(date);
+
+        const min = new Date();
+        var minutes = min.getMinutes();
+        console.log(date);
+
+        var x = document.getElementById('hours');
+        for (i = hours; i < 24; i++) {
+            var y = document.createElement('option');
+            y.innerHTML = i;
+            x.appendChild(y);
+            console.log(x);
+        }
+        
+        function myhours() {
+            var select = document.getElementById('minutes').value;
+            if (select == hours) {
+                var k = document.getElementById('minutes');
+                k.innerHTML = "";
+                for (i = minutes; i < 60; i++) {
+                    var j = document.createElement('option');
+                    j.innerHTML = i;
+                    k.appendChild(k);
+                    console.log(j);
+                }
+            } 
+            else {
+                var h = document.getElementById('minutes');
+                h.innerHTML = "";
+                for (i = 0; i < 60; i++) {
+                    var g = document.createElement('option');
+                    g.innerHTML = i;
+                    h.appendChild(g);
+                    console.log(h);
+                }
+            }
+        }
+        var select = document.getElementById('minutes').value;
+        if (select == hours) {
+            var k = document.getElementById('minutes');
+            k.innerHTML = "";
+            for (i = minutes; i < 60; i++) {
+                var j = document.createElement('option');
+                j.innerHTML = i;
+                k.appendChild(j);
+                console.log(k);
+            }
+        } else {
+            var h = document.getElementById('minutes');
+            h.innerHTML = "";
+            for (i = 0; i < 60; i++) {
+                var g = document.createElement('option');
+                g.innerHTML = i;
+                h.appendChild(g);
+                console.log(h);
+            }
+        }
+    </script>
+</body>
+</html>
